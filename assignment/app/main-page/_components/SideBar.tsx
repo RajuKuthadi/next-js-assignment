@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { List, sideBarList, SideBarOptions } from "./Utils";
 import { usePathname, useRouter } from "next/navigation";
 import PlanCard from "./PlanCard";
-import BellIcon from "@/public/icons/BellIcon";
 
 export default function SideBar() {
   const [list, setList] = useState<Array<SideBarOptions>>(sideBarList);
@@ -13,12 +12,12 @@ export default function SideBar() {
     router.push(data.route);
     console.log("PathName", path);
     console.log(data, title);
-    let arrList = [...list];
-    let index = sideBarList.findIndex(
+    const arrList = [...list];
+    const index = sideBarList.findIndex(
       (item: SideBarOptions) => item.title == title
     );
     console.log("index", index);
-    let index1 = arrList[index].list.findIndex((item) => item.id == data.id);
+    const index1 = arrList[index].list.findIndex((item) => item.id == data.id);
     arrList[index].list.map((item: List) => {
       item.isActive = false;
       return item;
