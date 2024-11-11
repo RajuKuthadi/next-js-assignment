@@ -1,4 +1,3 @@
-import BellIcon from "@/public/icons/BellIcon";
 import { ReactElement } from "react";
 
 export interface List {
