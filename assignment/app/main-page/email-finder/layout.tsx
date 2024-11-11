@@ -52,7 +52,7 @@ export default function EmailFinderLayout({
       </div>
       <div className="flex justify-between">
         <div className="m-3 flex gap-4 w-1/2">
-          {tabs.map((item: any) => {
+          {tabs.map((item: Tabs) => {
             return (
               <div
                 className={`flex text-sm p-1 ${
