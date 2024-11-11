@@ -1,6 +1,5 @@
 import BellIcon from "@/public/icons/BellIcon";
 import React from "react";
-import Select from "react-tailwindcss-select";
 
 export default function TopBar() {
   return (
