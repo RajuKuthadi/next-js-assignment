@@ -28,7 +28,7 @@ export default function History() {
       field: "completed",
       headerName: "Completed",
       width: 150,
-      renderCell: (params: GridRenderCellParams<any, Date>) => (
+      renderCell: (params: GridRenderCellParams<string, Date>) => (
         <div className="!h-[20px]">
           {params.row.completed ? (
             <button className="relative !w-[65px]  text-[8px] inline-flex items-center justify-center bg-green-200 overflow-hidden border-2 border-green-300 text-sm font-medium text-green-900 rounded-lg  ">
