@@ -5,7 +5,7 @@ import { DataGrid, GridColDef, GridRenderCellParams } from "@mui/x-data-grid";
 // import { getDummyTableData } from "./_components/DummyTableData";
 import { TableData } from "./_components/Utils";
 
-export default function page() {
+export default function History() {
   const [loader, setLoader] = useState(true);
   const [tableData, setTableData] = useState<Array<TableData>>([]);
   //dummy data columns
@@ -55,12 +55,13 @@ export default function page() {
         //loading dummy data after api call
         // let dataa:Array<TableData> = getDummyTableData();
         //loading from api
-        let apiData: Array<TableData> = json;
+        const apiData: Array<TableData> = json;
         setTableData(apiData);
         setLoader(false);
       })
-      .catch((err: any) => {
+      .catch(() => {
         //got no info of fail case so adding this alert
+        setLoader(false)
         alert("Some thing went wrong")
       });
   };
