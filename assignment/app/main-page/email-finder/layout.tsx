@@ -26,7 +26,7 @@ export default function EmailFinderLayout({
     router.push("/main-page/email-finder/history");
   }, []);
   const handleClick = (item: Tabs) => {
-    let tabsArr: Array<Tabs> = [...tabs];
+    const tabsArr: Array<Tabs> = [...tabs];
     tabsArr.map((item: Tabs) => {
       item.isActive = false;
       return item;
